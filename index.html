@@ -79,8 +79,7 @@ function pageScroll() {
 document.getElementById('value').addEventListener('input', pageScroll);
 
 function stop(){
-  // clearTimeout(timeoutID);
-window.scrollBy(0, val);
+  clearTimeout(timeoutID);
   document.getElementById('stopBtn').style.display='none';
 }
 </script>
