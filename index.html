@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    
+    .level{
+      display: flex;
+      justify-content: center;
+        position: fixed;
+     bottom: 20px;
+     right: 0;
+     left: 0;
+    
+    }
+.level input{
+  width:90vw;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="level" onchange="pageScroll()"  type="submit">
+    <input id="value" type="range" min="1" max="100" value="0">
+    <div id="percent" style="position: fixed; bottom: 0;">
+       0%
+      </div>
+  </div>
+<img style="margin-top: -100px;z-index: 1;" width="100%" src="/images/baqara1.jpg" alt="surah:Al-Baqara">
+  
+
+
+<img style="" width="100%" src="/images/baqara2.jpg" alt="surah:Al-Baqara">
+
+
+
+<img style="" width="100%" src="/images/baqara3.jpg" alt="surah:Al-Baqara">
+  
+
+
+<img style="" width="100%" src="/images/baqara4.jpg" alt="surah:Al-Baqara">
+  
+
+
+<img style="" width="100%" src="/images/baqara5.jpg" alt="surah:Al-Baqara">
+</body>
+<script>
+  function pageScroll() {
+    
+var val = document.getElementById('value').value;
+document.getElementById('percent').innerHTML =val+"%";
+        window.scrollBy(0,val); // horizontal and vertical scroll increments
+        scrolldelay = setTimeout('pageScroll()',500); // scrolls every 100 milliseconds
+}
+</script>
+</html>
